@@ -5,9 +5,13 @@ require 'pry'
 require 'better_errors'
 
 # Models
+require_relative 'models/author.rb'
+require_relative 'models/micropost.rb'
+require_relative 'models/tag.rb'
 
 
 # Controllers
+require_relative 'controllers/home_controller.rb'
 
 configure :development do
   use BetterErrors::Middleware
@@ -16,7 +20,7 @@ end
 
 ActiveRecord::Base.establish_connection({
 		adapter: 'postgresql',
-		database: 'microblog_db',
+		database: 'complainer_db',
 		host: 'localhost'
 	})
 
