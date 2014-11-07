@@ -14,8 +14,7 @@ CREATE TABLE authors(
 
 CREATE TABLE microposts(
 	id SERIAL PRIMARY KEY,
-	time VARCHAR(255),
-	date_created VARCHAR(255),
+	created_at TIMESTAMP,
 	blog_post TEXT,
 	author_id INTEGER REFERENCES authors
 
