@@ -1,0 +1,11 @@
+
+attributes
+
+1) authors: id | name | image_url 
+
+2) microposts:  id | created_at | blog_post | author_id 
+
+3) tags: id | name 
+
+4) tags_microposts:  tag_id | microposts_id 
+

@@ -12,6 +12,10 @@ require_relative 'models/tag.rb'
 
 # Controllers
 require_relative 'controllers/home_controller.rb'
+require_relative 'controllers/authors_controller.rb'
+require_relative 'controllers/microposts_controller.rb'
+require_relative 'controllers/tags_controller.rb'
+
 
 configure :development do
   use BetterErrors::Middleware
