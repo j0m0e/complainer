@@ -1,3 +1,14 @@
-<p>EDIT MY AUTHOR INFO HERE</p>
+
+<h3>Edit your info below:</h3>
+<form action="/authors/<%= @author.id %>" method="POST">
+	<input type="hidden" name="_method" value="PUT">
+	<label>Name:<br>
+		<input type="text" name="author[name]" value="<%= @author.name %>">
+	</label><br>
+	<label>Image URL:<br>
+		<input type="text" name="author[image_url]" value="<%= @author.image_url %>">
+	</label><br>
+	<input type="submit">
+</form>
 
 <!--  id | name | image_url -->

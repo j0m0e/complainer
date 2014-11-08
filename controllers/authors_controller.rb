@@ -26,13 +26,18 @@ end
 # EDIT
 # will have to add more to route later
 get '/authors/:id/edit' do
-	
+	@author = Author.find(params[:id])
 	erb :'authors/edit'
 end
 
 # UPDATE
 put '/authors/:id' do
-
+	author = Author.find(params[:id])
+	if author.update(params[:author])
+		redirect "/authors/#{author.id}"
+	else
+		redirect "/authors/#{author.id}/edit"
+	end
 end
 
 
