@@ -23,7 +23,6 @@ end
 
 post '/tags' do
 	new_tag = Tag.new(params[:tag])
-	tag = Tag.find(params[:id])
 	if new_tag.save
 		redirect "/tags"
 	else
