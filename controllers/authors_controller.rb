@@ -5,7 +5,6 @@
 
 # INDEX
 get '/authors' do
-	@authors = Author.all
 	erb :'/authors/index'
 end
 

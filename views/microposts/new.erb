@@ -1,1 +1,27 @@
-<p>MAKE A NEW COMPLAINT</p>
+<h3>MAKE A NEW COMPLAINT</h3>
+
+
+
+
+
+<form action="/microposts" method="POST">
+	<label>Select an Author:<br>
+		<select name="micropost[author_id]">
+			<% @authors.each do |author| %>
+			<option value="<%= author.id %>"> <%= author.name %>
+			</option>
+			<% end %>
+		</select>
+	</label><br><br>
+	<label>Voice your Complaint!<br>
+		<textarea name="micropost[blog_post]" cols="40" rows="3" ></textarea>
+	</label><br>
+	
+
+
+
+	<input type="submit">
+	<button><a href="/authors/new">Become a New Member</a></button>
+</form>
+
+

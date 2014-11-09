@@ -38,5 +38,6 @@ body {
 
 .author_info img{
 	width: 160px;
+	display: block;
 	
 }
