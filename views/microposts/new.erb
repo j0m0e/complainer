@@ -1,10 +1,8 @@
 <h3>MAKE A NEW COMPLAINT</h3>
 
 
-
-
-
 <form action="/microposts" method="POST">
+	
 	<label>Select an Author:<br>
 		<select name="micropost[author_id]">
 			<% @authors.each do |author| %>
@@ -13,14 +11,25 @@
 			<% end %>
 		</select>
 	</label><br><br>
+	
 	<label>Voice your Complaint!<br>
 		<textarea name="micropost[blog_post]" cols="40" rows="3" ></textarea>
 	</label><br>
+	
 	<label>Choose 1 or more tags:<br>
-		<input type="checkbox" name="tag[]" value="Silly">Silly<br/>
-  </label>
+				
+			<% @tags.each do |tag| %>
+			<input type="checkbox" name="tag[name]" value=""><%= tag.name %>
+			<% end %>
+		
+	</label><br>
+ 
 	
 
+
+	<!--<label>Choose 1 or more tags:<br>
+		<input type="checkbox" name="tag[]" value="Silly">Silly<br/>
+  </label>-->
 
 
 	<input type="submit">
