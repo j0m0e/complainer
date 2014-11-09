@@ -1,7 +1,13 @@
-<p>Authors' Index</p>
+<h3>Authors</h3>
 
-
-<a href="/authors/new">Become an Author</a>
-
+<div class="author_info">
+	<p><a href="/authors/new">Become an Author</a></p>
+	<% @authors.each do |author| %>
+	<%= author.name%>
+	<a href="/authors/<%= author.id %>"><img src="<%= author.image_url%>"></a>
+	<% end %>
+</div>
 
 <!--  id | name | image_url -->
+
+

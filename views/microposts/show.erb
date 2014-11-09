@@ -1,1 +1,29 @@
-<p>Show Me Particular Complaints</p>
+<h3>Complaint</h3> 
+<div class="complaint_info">
+	
+	<h4><%=  @micropost.author.name %></h4>
+	<a href="/authors/<%= @micropost.author.id %>">  
+		<img src="<%= @micropost.author.image_url %>"> 
+	</a>
+	<p><%=  @micropost.blog_post %></p>
+	<p><%=  @micropost.created_at %></p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+ tags: id | name 
+
+ tags_microposts:  tag_id | microposts_id 
+  authors: id | name | image_url 
+) microposts:  id | created_at | blog_post | author_id  -->

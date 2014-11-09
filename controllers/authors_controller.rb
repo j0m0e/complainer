@@ -5,6 +5,7 @@
 
 # INDEX
 get '/authors' do
+	@authors = Author.all
 	erb :'/authors/index'
 end
 
@@ -44,6 +45,17 @@ end
 get '/authors/:id' do
 	@author = Author.find(params[:id])
 	erb :'/authors/show'
+end
+
+# DESTROY
+
+delete '/authors/:id' do
+	author = Author.find(params[:id])
+	if author.destroy
+		redirect "/authors"
+	else
+		redirect "/authors/#{author.id}"
+	end
 end
 
 
