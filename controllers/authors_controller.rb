@@ -13,8 +13,7 @@ end
 post '/authors' do
 	new_author = Author.new(params[:author])
 	if new_author.save
-	#change line 18 to /author/#{author.id} 
-		redirect "/authors" 
+		redirect "/authors/#{new_author.id}" 
 	end
 end
 

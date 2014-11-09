@@ -6,6 +6,7 @@
 # NEW 
 get '/microposts/new' do
 	@authors = Author.all
+	
 
 	erb :'microposts/new'
 end
