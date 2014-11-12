@@ -9,6 +9,7 @@ get '/microposts/new' do
 	@tags = Tag.all
 
 	erb :'microposts/new'
+
 end
 
 # CREATE
