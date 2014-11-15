@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS tags_microposts CASCADE;
+DROP TABLE IF EXISTS microposts_tags CASCADE;
 DROP TABLE IF EXISTS tags CASCADE;
 DROP TABLE IF EXISTS microposts CASCADE;
 DROP TABLE IF EXISTS authors;
@@ -27,7 +27,7 @@ CREATE TABLE tags(
 );
 
 
-CREATE TABLE tags_microposts(
-	tag_id INTEGER REFERENCES tags,
-	microposts_id INTEGER REFERENCES microposts
+CREATE TABLE microposts_tags(
+	micropost_id INTEGER REFERENCES microposts,
+	tag_id INTEGER REFERENCES tags
 );

@@ -3,24 +3,23 @@
 # ===============
 
 # INDEX
-
 get '/tags' do
 	@tags = Tag.all
 	erb :'/tags/index'
 end
 
-# CREATE
+# NEW
 get '/tags/new' do
 	erb :'tags/new'
 end
 
 # SHOW
-
 get '/tags/:id' do
-	#@tags = Tag.find(params[:id])
+	@tag = Tag.find(params[:id])
 	erb :'tags/show'
 end
 
+# CREATE
 post '/tags' do
 	new_tag = Tag.new(params[:tag])
 	if new_tag.save
@@ -28,7 +27,6 @@ post '/tags' do
 	else
 		redirect "/tags/new"
 	end
-
 end
 
 

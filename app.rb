@@ -1,3 +1,4 @@
+# Ruby Gems
 require 'sinatra'
 require 'sinatra/reloader'
 require 'active_record'
@@ -16,12 +17,13 @@ require_relative 'controllers/authors_controller.rb'
 require_relative 'controllers/microposts_controller.rb'
 require_relative 'controllers/tags_controller.rb'
 
-
+# For Better Errors Gem
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = File.expand_path('..', __FILE__)
 end
 
+# Establishes and Closes Connection with DB
 ActiveRecord::Base.establish_connection({
 		adapter: 'postgresql',
 		database: 'complainer_db',
@@ -29,4 +31,6 @@ ActiveRecord::Base.establish_connection({
 	})
 
 after { ActiveRecord::Base.connection.close }
+
+
 

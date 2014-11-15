@@ -3,8 +3,10 @@
 <div class="author_info">
 	<p><a href="/authors/new">Become an Author</a></p>
 	<% @authors.each do |author| %>
-	<%= author.name%>
-	<a href="/authors/<%= author.id %>"><img src="<%= author.image_url%>"></a>
+		<%= author.name%>
+		<a href="/authors/<%= author.id %>">
+			<img src="<%= author.image_url%>">
+		</a>
 	<% end %>
 </div>
 
