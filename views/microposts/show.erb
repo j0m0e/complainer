@@ -6,8 +6,12 @@
 		<img src="<%= @micropost.author.image_url %>"> 
 	</a>
 	<p><%=  @micropost.blog_post %></p>
-	<p><%= @tag.name %></p>
+	<p>Tags: <% @micropost.tags.each  do |tag| %>
+			<%= tag.name %>
+			<% end %>
+	</p>
 	<p><%=  @micropost.created_at %></p>
+
 	
 
 

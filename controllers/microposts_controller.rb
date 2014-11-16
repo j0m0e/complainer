@@ -22,9 +22,7 @@ end
 # SHOW
 get '/microposts/:id' do
 	@micropost = Micropost.find(params[:id])
-	@tag = Tag.find(params[:id])
 	erb :'/microposts/show'
-
 end
 
 
